@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Title/Heading of Website</title>
+  <title>DropList Example</title>
   
   <meta charset="utf-8">
   <meta name="description" content="A basic HTML skeleton">
@@ -11,14 +11,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="css/style.css" rel="stylesheet">
+
+  <style>
+     body {background-color: powderblue;}
+     h1   {color: blue;}
+     h3    {color: red;}
+  </style>
 </head>
 
-<body>
+<body onload="blink();">
   
-  <h1>Main Heading</h1>
-  <h3>sub heading</h3>
-  <p>Hello, World!</p>
-
+  <h1 style="color:blue;">DropList</h1>
+  <h3>Example</h3>
+  <form>
+	<div><b>Icecream Flavours</b></div>
+	<select name="Icecream Flavours">
+		<option value="double chocolate">Double Chocolate</option>
+		<option value="vanilla">Vanilla</option>
+		<option value="strawberry" selected>Strawberry</option>
+		<option value="caramel">Caramel</option>
+	</select>
+  </form>
+	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
