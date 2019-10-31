@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Title/Heading of Website</title>
+  <title>Radio Button Example</title>
   
   <meta charset="utf-8">
   <meta name="description" content="A basic HTML skeleton">
@@ -11,13 +11,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="css/style.css" rel="stylesheet">
+
+  <style>
+     body {background-color: powderblue;}
+     h1   {color: blue;}
+     h3    {color: red;}
+  </style>
 </head>
 
 <body>
   
-  <h1>Main Heading</h1>
-  <h3>sub heading</h3>
-  <p>Hello, World!</p>
+  <h1 style="color:blue;">Radio Button</h1>
+  <h3>Example</h3>
+  <div>
+    <input type="radio" id="huey" name="drone" value="huey">
+    <label for="huey">Huey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey">
+    <label for="dewey">Dewey</label>
+  </div>
+
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie">
+    <label for="louie">Louie</label>
+  </div>
+
+  <a href="javascript:clearAllRadios()">Clear</a>
+
+  <script type="text/javascript">
+    function clearAllRadios() {
+       var radList = document.getElementsByName('drone');
+       for (var i = 0; i < radList.length; i++) {
+         if(radList[i].checked) document.getElementById(radList[i].id).checked = false;
+       }
+     }
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/script.js"></script>
